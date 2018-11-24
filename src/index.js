@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import App from './app'
+import App from './App'
 
 const wrapper = document.getElementById('root')
-wrapper ? ReactDOM.render(<App />, wrapper) : false
+ReactDOM.render(<App />, wrapper)
