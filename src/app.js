@@ -2,6 +2,6 @@ import React, { Component } from 'react'
 
 export default class App extends Component {
   render() {
-    return <div>hm r</div>
+    return <div>hmr</div>
   }
 }

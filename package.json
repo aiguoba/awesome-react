@@ -6,7 +6,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config build/webpack.dev.js",
+    "start": "webpack-dev-server --progress --config build/webpack.dev.js",
     "build": "webpack --config build/webpack.prod.js"
   },
   "devDependencies": {

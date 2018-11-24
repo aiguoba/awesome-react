@@ -5,3 +5,5 @@ import App from './App'
 
 const wrapper = document.getElementById('root')
 ReactDOM.render(<App />, wrapper)
+
+module.hot && module.hot.accept()
