@@ -1,6 +1,6 @@
-# awesome-react
+# 🍀 awesome-react
 
-## 环境搭建
+## 🌱 环境搭建
 
 - webpack@4
 - webpack-cli@3
