@@ -1,0 +1,14 @@
+.wrapper {
+  line-height: 30px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.col {
+  text-align: center;
+}
