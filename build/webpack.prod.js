@@ -5,6 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = merge(webpackBaseConfig, {
   mode: 'production',
+  devtool: 'source-map',
   plugins: [
     new CleanWebpackPlugin(['../dist'], {
       allowExternal: true,

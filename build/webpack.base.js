@@ -7,10 +7,17 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, '..', 'dist')
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts'],
+    alias: {
+      '~': path.resolve(__dirname, '..', 'src')
+    },
+    mainFiles: ['index']
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
@@ -19,6 +26,10 @@ module.exports = {
       {
         test: /\.html$/,
         use: [{ loader: 'html-loader' }]
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader?modules', 'sass-loader']
       }
     ]
   },
