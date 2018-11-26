@@ -14,3 +14,12 @@
   - @babel/preset-env (es6->es5)
   - @bebel/preset-react (jsx->js)
 - webpack-merge(合并 webpack 配置)
+
+## 🌵 数据流
+
+- Mobx
+- Redux
+
+## 🌿 工具库
+- font-spider
+- fontmin
