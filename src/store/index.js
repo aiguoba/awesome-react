@@ -1,4 +1,4 @@
-import { observable, computed, action } from 'mobx'
+import { observable, computed, action, autorun } from 'mobx'
 
 export default class Store {
   @observable apple = 0
