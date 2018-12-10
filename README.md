@@ -26,46 +26,46 @@
       - 衍生数据(计算属性)
       - 后端集成(服务请求)
     - 动作: 任意一段可以改变状态的代码.
-    - Action --> State --> Views
+    - `Action` --> `State` --> `Views`
   - API
-    - @observable 将可被制作成可观察的数据结构转换为可观测对象
-      - observable(value)
-      - observable.box(value,options?)
-      - observable.object(value,decorators?,options?)
-      - observable.array(value,options?)
-      - observable.map(value,options?)
-      - extendObservable
-    - @observable.deep
-    - @observable.ref
-    - @observable.shadow
-    - @computed
-    - @action
-    - @action.bound
-    - @observer `mobx-react`
-    - autorun
-    - when
-    - reaction
-    - onReactionError
+    - `@observable` 将可被制作成可观察的数据结构转换为可观测对象, `@observable.deep` 的别名.
+      - `observable(value)` `{ deep: false }` 浅集合
+      - `observable.box(value,options?)` `{ deep: false }` 浅集合
+      - `observable.object(value,decorators?,options?)` `{ deep: false }` 浅集合
+      - `observable.array(value,options?)` `{ deep: false }` 浅集合
+      - `observable.map(value,options?)` `{ deep: false }` 浅集合
+      - `extendObservable` `{ deep: false }` 浅集合
+    - `@observable.deep` 任何 `observable` 都默认使用的调节器.
+    - `@observable.ref` 禁用自动的 `observable` 转换,只是创建了一个`observable`.
+    - `@observable.shadow` 只能与集合组合使用,将任何分配的集合转换为`observable`,但该集合的值将按照原样处理.
+    - `@computed` 创建衍生属性.
+    - `@action` 创建动作
+    - `@action.bound` 创建动作,并将 this 绑定到实例
+    - `@observer` `mobx-react`
+    - `autorun`
+    - `when`
+    - `reaction`
+    - `onReactionError`
   - 实用工具
     - [mobx-utils](https://github.com/mobxjs/mobx-utils)
-    - Provider `mobx-react`
-    - injetc `mobx-react`
-    - toJS
-    - isObservable & isObservableProp
-    - isObservableObject|Array|Map & isBoxedObservable
-    - isArrayLike
-    - isAction
-    - isComputed & isComputedProp
-    - intercept `拦截`
-    - observe
-    - onBecomeObserved & onBecomeUnobserved
-    - configure
-      - arraybuffer
-      - computedRequiresReaction
-      - disableErrorBoundaries
-      - enforceActions
-      - isolateGlobalState
-      - reactionScheduler
+    - `Provider` `mobx-react`
+    - `injetc` `mobx-react`
+    - `toJS`
+    - `isObservable` & `isObservableProp`
+    - `isObservableObject`|`Array`|`Map` & `isBoxedObservable`
+    - `isArrayLike`
+    - `isAction`
+    - `isComputed` & `isComputedProp`
+    - `intercept` `拦截`
+    - `observe`
+    - `onBecomeObserved` & `onBecomeUnobserved`
+    - `configure`
+      - `arraybuffer`
+      - `computedRequiresReaction`
+      - `disableErrorBoundaries`
+      - `enforceActions`
+      - `isolateGlobalState`
+      - `reactionScheduler`
 
 - Redux
 
