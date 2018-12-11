@@ -69,6 +69,40 @@
 
 - Redux
 
+## 🍗 `this`
+
+- `React.createClass`
+- `props bind`
+- `props ()=>{}`
+- `constructor bind`
+- `static ()=>{}`
+
+## 🌶 `extends React.Component`
+
+```js
+constructor(){
+  super(...arguments)
+}
+```
+
+## 🌽 `inline style`
+
+```jsx
+const View = ({ milliseconds = 0 }) => {
+  return (
+    <h1
+      style={{
+        'font-family': 'monospace'
+      }}
+    >
+      view
+    </h1>
+  )
+}
+```
+
+`重复定义 style 对象,性能浪费`
+
 ## 🌿 工具库
 
 - font-spider

@@ -5,6 +5,9 @@ import { observer } from 'mobx-react'
 
 @observer
 export default class Test extends Component {
+  constructor() {
+    super(...arguments)
+  }
   componentDidMount() {
     autorun(() => {
       const { apple, orange, pear, total } = this.props.store
