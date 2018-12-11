@@ -99,7 +99,7 @@ const View = ({ milliseconds = 0 }) => {
     <h1
       style={{
         'font-family': 'monospace'
-      }}
+      }} {/** ❌ */}
     >
       view
     </h1>
@@ -107,7 +107,7 @@ const View = ({ milliseconds = 0 }) => {
 }
 ```
 
-`重复定义 style 对象,性能浪费,如果每次都是使用相同的样式对象,可提出 render 函数之外.`
+`重复定义 style 对象,性能浪费,如果每次都是使用相同的样式对象,可提出 render 函数之外. ✅`
 
 ## 🌿 工具库
 
