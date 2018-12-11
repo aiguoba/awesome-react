@@ -71,13 +71,19 @@
 
 ## 🍗 `this`
 
-- `React.createClass`
-- `props bind`
-- `props ()=>{}`
-- `constructor bind`
-- `static ()=>{}`
+- `React.createClass 废弃 ❌`
+- `props bind 每次render重复bind,性能浪费 ❌`
+- `props ()=>{} 每次render重复生命匿名函数,性能浪费 ❌`
+- `constructor bind 繁琐,易出错 ❌`
+- `static ()=>{} ✅`
 
 ## 🌶 `extends React.Component`
+
+```js
+constructor(props){
+  super(props)
+}
+```
 
 ```js
 constructor(){
@@ -101,7 +107,7 @@ const View = ({ milliseconds = 0 }) => {
 }
 ```
 
-`重复定义 style 对象,性能浪费`
+`重复定义 style 对象,性能浪费,如果每次都是使用相同的样式对象,可提出 render 函数之外.`
 
 ## 🌿 工具库
 
