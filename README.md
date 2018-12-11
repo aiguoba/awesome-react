@@ -69,7 +69,7 @@
 
 - Redux
 
-## 🍗 `this`
+## 🍬 `this`
 
 - `React.createClass 废弃 ❌`
 - `props bind 每次render重复bind,性能浪费 ❌`
@@ -77,7 +77,7 @@
 - `constructor bind 繁琐,易出错 ❌`
 - `static ()=>{} ✅`
 
-## 🌶 `extends React.Component`
+## 🍭 `extends React.Component`
 
 ```js
 constructor(props){
@@ -91,7 +91,7 @@ constructor(){
 }
 ```
 
-## 🌽 `inline style`
+## 🍿 `inline style`
 
 ```jsx
 const View = ({ milliseconds = 0 }) => {
