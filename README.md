@@ -69,6 +69,35 @@
 
 - Redux
 
+## CSS in JS
+
+- [`JSS`](https://cssinjs.org/?v=v9.8.7)
+- [`Radium`](https://github.com/FormidableLabs/radium)
+- [CSS-Modules](https://github.com/css-modules/css-modules)
+  - `css-loader options:{ modules：true }`
+- `styled-jsx`
+
+  - 安装 - `npm i styled-jsx -D`
+  - `.babelrc` `{ "plugins": [ "styled-jsx/babel" ] }`
+  - 支持 `sass`、`less`、`stylus`....
+  - `styled-jsx-plugin-sass`
+  - `npm i styled-jsx-plugins-sass node-sass -D`
+    - ```json
+      {
+        "plugins": [
+          ["styled-jsx/babel", { "plugins": ["styled-jsx-plugin-sass"] }]
+        ]
+      }
+      ```
+    - `styled-jsx-plugin-postcss`
+    - `styled-jsx-plugin-stylelint`
+    - `styled-jsx-plugin-less`
+    - `styled-jsx-plugin-stylus`
+  - `vscode` 语法高亮 `vscode-styled-jsx`
+  - `vscode` 自动补全 `styled-jsx Language Server ❎`
+
+* `styled-component`
+
 ## 🍬 `this`
 
 - `React.createClass 废弃 ❌`
@@ -111,5 +140,6 @@ const View = ({ milliseconds = 0 }) => {
 
 ## 🌿 工具库
 
-- font-spider
-- fontmin
+- 字体压缩
+  - font-spider
+  - fontmin

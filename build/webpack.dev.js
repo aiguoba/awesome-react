@@ -6,7 +6,7 @@ module.exports = merge(webpackBaseConfig, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
-    host: '0.0.0.0',
+    host: 'localhost',
     port: 9527,
     open: true,
     hot: true,
