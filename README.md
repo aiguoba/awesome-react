@@ -15,6 +15,14 @@
   - @bebel/preset-react (jsx->js)
 - webpack-merge(合并 webpack 配置)
 
+## 🍒 组件
+
+- 有状态组件
+- 无状态组件
+-
+  - React.PureComponent
+  - React.memo
+
 ## 🌵 数据流
 
 - Mobx
