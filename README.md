@@ -81,13 +81,13 @@
 
 ```js
 constructor(props){
-  super(props)
+  super(props) // ✅
 }
 ```
 
 ```js
 constructor(){
-  super(...arguments)
+  super(...arguments) // ✅ 💯
 }
 ```
 
