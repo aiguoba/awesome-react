@@ -15,12 +15,21 @@
   - @bebel/preset-react (jsx->js)
 - webpack-merge(合并 webpack 配置)
 
-## 🍒 组件
+## 👻 生命周期
+
+[![life](./public/life.png)](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+
+## 🍒 组件设计模式
 
 - 有状态组件
 - 无状态组件
-- - React.PureComponent
+  - React.PureComponent
   - React.memo
+- 高阶组件
+  - withXXX
+- render props
+- 提供者模式
+- 组合组件
 
 ## 🌵 数据流
 
@@ -144,10 +153,6 @@ const View = ({ milliseconds = 0 }) => {
 ```
 
 `重复定义 style 对象,性能浪费,如果每次都是使用相同的样式对象,可提出 render 函数之外. ✅`
-
-## 👻 生命周期
-
-[![life](./public/life.png)](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 
 ## 🌿 工具库
 
