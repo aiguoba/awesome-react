@@ -5,6 +5,7 @@ export default class PureComponentTest extends PureComponent {
     super(...arguments)
     this.state = { age: 0 }
   }
+
   // shouldComponentUpdate(nextProps, nextState) {
   //   console.log(nextProps, nextState)
   //   return true

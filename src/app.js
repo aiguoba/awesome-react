@@ -14,6 +14,9 @@ import PureComponentTest from '~/components/test/pure-component'
 /** memo */
 import MemoTest from '~/components/test/memo'
 
+/** cycle-life */
+import Life from '~/components/test/life'
+
 @observer
 export default class App extends Component {
   constructor() {
@@ -39,6 +42,7 @@ export default class App extends Component {
         {/* <StyledJSX /> */}
         <PureComponentTest name={name} />
         {/* <MemoTest name="day" /> */}
+        <Life />
       </Fragment>
     )
   }
