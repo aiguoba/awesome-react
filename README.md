@@ -118,7 +118,7 @@
 
 - `React.createClass 废弃 ❌`
 - `props bind 每次render重复bind,性能浪费 ❌`
-- `props ()=>{} 每次render重复生命匿名函数,性能浪费 ❌`
+- `props ()=>{} 每次render重复声明匿名函数,性能浪费 ❌`
 - `constructor bind 繁琐,易出错 ❌`
 - `static ()=>{} ✅`
 
