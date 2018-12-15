@@ -147,7 +147,7 @@ const View = ({ milliseconds = 0 }) => {
 
 ## 👻 生命周期
 
-[生命周期](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+[![life](./public/life.png)](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 
 ## 🌿 工具库
 
