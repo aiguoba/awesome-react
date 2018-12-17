@@ -31,6 +31,19 @@
 - 提供者模式
 - 组合组件
 
+## 🍧 路由(`React-Router`)
+
+- 依赖 `react-router-dom`
+
+## 🍗️ 国际化
+
+- 依赖 `react-intl`
+
+## ⛷ code splitting
+
+- 方案一 `webpack`, `babel-plugin-syntax-dynamic-import`, `react-loadable`.
+- 方案二 `webpack`,`bundle-loader`
+
 ## 🌵 数据流
 
 - Mobx
