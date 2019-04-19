@@ -1,9 +1,21 @@
-import React from "react"
-import ReactDOM from "react-dom"
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Header from './components/Header'
+import './index.scss'
 
-import App from "./App"
+class HelloMessage extends React.Component {
+  render() {
+    return (
+      <div>
+        <Header />
+        <div className="container">
+          <h1>Hello {this.props.name}</h1>
+        </div>
+      </div>
+    )
+  }
+}
 
-const wrapper = document.getElementById("root")
-ReactDOM.render(<App />, wrapper)
+let App = document.getElementById('app')
 
-module.hot && module.hot.accept()
+ReactDOM.render(<HelloMessage name="Parcel" />, App)
