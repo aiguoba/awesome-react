@@ -1,41 +1,52 @@
-const path = require('path')
+require('dotenv').config()
+const { resolve, join } = require('path')
+const webpack = require('webpack')
+const WebpackBar = require('webpackbar')
+const CopyPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { BUILD_ENV } = process.env
 
 module.exports = {
-  entry: path.resolve(__dirname, '..', 'src/index.js'),
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, '..', 'dist')
-  },
-  resolve: {
-    extensions: ['.js', '.jsx', '.ts'],
-    alias: {
-      '~': path.resolve(__dirname, '..', 'src')
-    },
-    mainFiles: ['index']
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader'
-        }
-      },
-      {
-        test: /\.html$/,
-        use: [{ loader: 'html-loader' }]
-      },
-      {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader?modules', 'sass-loader']
-      }
-    ]
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html'
-    })
-  ]
+	entry: resolve(__dirname, '../src/index.tsx'),
+	resolve: {
+		extensions: ['.ts', '.tsx', '.js'],
+		alias: {
+			'~': resolve(__dirname, '..', 'src'),
+			layouts: resolve(__dirname, '..', 'src/layouts'),
+			assets: resolve(__dirname, '..', 'src/assets'),
+			components: resolve(__dirname, '..', 'src/components'),
+			pages: resolve(__dirname, '..', 'src/pages'),
+			utils: resolve(__dirname, '..', 'src/utils')
+		},
+		mainFiles: ['index']
+	},
+	output: {
+		path: join(__dirname, '../dist'),
+		filename: 'bundle.js'
+	},
+	plugins: [
+		new WebpackBar(),
+		new CopyPlugin([
+			{
+				from: resolve(__dirname, '../static'),
+				to: resolve(__dirname, '../dist/static')
+			}
+		]),
+		new webpack.DefinePlugin({
+			NODE_ENV: JSON.stringify(BUILD_ENV)
+		}),
+		new HtmlWebpackPlugin({
+			title: 'TypeScript + React',
+			filename: 'index.html',
+			template: resolve(__dirname, '../src/index.html'),
+			minify: {
+				removeRedundantAttributes: true,
+				collapseWhitespace: true,
+				removeAttributeQuotes: true,
+				removeComments: true,
+				collapseBooleanAttributes: true
+			},
+			favicon: ''
+		})
+	]
 }
