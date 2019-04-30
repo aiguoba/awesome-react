@@ -36,7 +36,7 @@ type State = Readonly<typeof initialState>
 export default class Stateful extends Component<object, State> {
 	readonly state: State = initialState
 
-	handleClick = () => {
+	private handleClick = () => {
 		this.setState(preState => ({
 			clickCount: preState.clickCount + 1
 		}))
