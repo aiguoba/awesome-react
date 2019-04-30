@@ -24,43 +24,7 @@ module.exports = merge(webpackBaseConfig, {
 		historyApiFallback: true,
 		clientLogLevel: 'warning'
 	},
-	module: {
-		rules: [
-			{
-				test: /\.(js|ts|jsx|tsx)$/,
-				exclude: /node_modules/,
-				use: ['babel-loader', 'eslint-loader']
-			},
-			{
-				test: /\.html$/,
-				use: [{ loader: 'html-loader' }]
-			},
-			{
-				test: /\.css$/,
-				use: ['style-loader', 'css-loader']
-			},
-			{
-				test: /\.styl$/,
-				use: ['style-loader', 'css-loader']
-			},
-			{
-				test: /\.svg$/,
-				use: 'file-loader'
-			},
-			{ test: /\.(eot|woff|ttf)$/, loader: 'file-loader' },
-			{
-				test: /\.(jpe?g|png|gif)$/,
-				use: [
-					{
-						loader: 'url-loader',
-						options: {
-							limit: 10 * 1024
-						}
-					}
-				]
-			}
-		]
-	},
+
 	plugins: [
 		new FriendlyErrorsWebpackPlugin({
 			compilationSuccessInfo: {
