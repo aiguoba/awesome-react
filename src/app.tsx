@@ -9,7 +9,11 @@ class App extends React.Component<Props, {}> {
 			<div>
 				<h1>React with Typescript</h1>
 				<h2>Stateless</h2>
-				<Stateless onClick={() => console.log(1)} text="Click Me" />
+				<Stateless
+					onClick={() => console.log(1)}
+					text="Click Me"
+					color={['green']}
+				/>
 				<h2>Stateful</h2>
 				<Stateful />
 			</div>

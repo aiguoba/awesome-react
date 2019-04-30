@@ -1,9 +1,3 @@
-/*
- * @Author: Day
- * @Date: 2019-04-30 18:56:01
- * @Last Modified by: Day
- * @Last Modified time: 2019-04-30 19:08:41
- */
 import React, { Component } from 'react'
 const initialState = {
 	clickCount: 0
@@ -14,8 +8,8 @@ type State = Readonly<typeof initialState>
 export default class Stateful extends Component<object, State> {
 	readonly state: State = initialState
 
-	handleClick = () => {
-		this.setState(preState => ({
+	private handleClick = () => {
+		this.setState((preState: State) => ({
 			clickCount: preState.clickCount + 1
 		}))
 	}
