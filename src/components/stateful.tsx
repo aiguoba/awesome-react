@@ -1,31 +1,9 @@
-# 🌴Awesome-React (typescript)
-
-## Use
-
-- babel@7
-- webpack@4
-- typescript@3
-
-## React 组件模式
-
-### 无状态组件
-
-```ts
-import React, { MouseEvent, ReactNode, SFC } from 'react'
-
-interface Props {
-	onClick(e: MouseEvent<HTMLElement>): void
-	text?: ReactNode
-}
-
-export const Stateless: SFC<Props> = ({ onClick: handleClick, text }) => (
-	<div onClick={handleClick}>{text}</div>
-)
-```
-
-### 有状态组件
-
-```ts
+/*
+ * @Author: Day
+ * @Date: 2019-04-30 18:56:01
+ * @Last Modified by: Day
+ * @Last Modified time: 2019-04-30 19:08:41
+ */
 import React, { Component } from 'react'
 const initialState = {
 	clickCount: 0
@@ -47,4 +25,3 @@ export default class Stateful extends Component<object, State> {
 		return <div onClick={this.handleClick}>Click Count {clickCount} </div>
 	}
 }
-```

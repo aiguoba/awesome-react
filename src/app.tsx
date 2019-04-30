@@ -1,17 +1,17 @@
 import React from 'react'
 import { Stateless } from './components/stateless'
-
-interface Props {
-	color: string
-}
+import Stateful from './components/stateful'
+interface Props {}
 
 class App extends React.Component<Props, {}> {
 	render() {
 		return (
 			<div>
 				<h1>React with Typescript</h1>
-				<p>The color of this page is: {this.props.color}</p>
+				<h2>Stateless</h2>
 				<Stateless onClick={() => console.log(1)} text="Click Me" />
+				<h2>Stateful</h2>
+				<Stateful />
 			</div>
 		)
 	}
