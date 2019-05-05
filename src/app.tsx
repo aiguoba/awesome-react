@@ -1,31 +1,31 @@
-import React from 'react'
-import { Stateless } from './components/stateless'
-import Stateful from './components/stateful'
-import { StatelessWithDefaultProps } from './components/stateless-with-default'
-import StatefulWithDefaultProps from 'components/stateful-with-default'
-interface Props {}
+import React, { lazy, Suspense } from 'react'
+import {
+	BrowserRouter as Router,
+	Route,
+	Switch,
+	Redirect
+} from 'react-router-dom'
+import { renderRoutes } from 'react-router-config'
+import ErrorBoundary from './utils/error-boundary'
+import { RouteConfig } from 'react-router-config'
+import routes from './routes'
 
-class App extends React.Component<Props, {}> {
+interface Props {}
+interface State {}
+
+class App extends React.Component<Props, State> {
 	render() {
 		return (
-			<div>
-				<h1>React with Typescript</h1>
-				<h2>Stateless</h2>
-				<Stateless
-					onClick={() => alert('Click')}
-					text="Click Me"
-					color={['green (get from props)']}
-				/>
-				<h2>Stateful</h2>
-				<Stateful />
-				<h2>Stateless with default props</h2>
-				<StatelessWithDefaultProps
-					onClick={() => alert('Click')}
-					text="Click Me"
-				/>
-				<h2>Stateful with default props</h2>
-				<StatefulWithDefaultProps />
-			</div>
+			<ErrorBoundary>
+				<Router>
+					<Suspense fallback={'加载中...'}>
+						<Switch>
+							{renderRoutes(routes as RouteConfig[])}
+							<Redirect to="/404" />
+						</Switch>
+					</Suspense>
+				</Router>
+			</ErrorBoundary>
 		)
 	}
 }
