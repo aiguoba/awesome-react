@@ -22,7 +22,7 @@ module.exports = {
 	},
 	output: {
 		path: join(__dirname, '../dist'),
-		filename: 'bundle.js'
+		filename: '[name].[chunkhash].js'
 	},
 	module: {
 		rules: [
