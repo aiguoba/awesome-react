@@ -6,6 +6,7 @@
 	"private": true,
 	"main": "index.js",
 	"scripts": {
+		"dev": "npm start",
 		"start": "webpack-dev-server --progress --config build/webpack.dev.js"
 	},
 	"husky": {

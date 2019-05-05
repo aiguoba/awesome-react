@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 const initialState = {
 	clickCount: 0
 }
@@ -14,7 +15,7 @@ export default class Stateful extends Component<object, State> {
 		}))
 	}
 
-	render() {
+	public render() {
 		const { clickCount } = this.state
 		return <div onClick={this.handleClick}>Click Count {clickCount} </div>
 	}

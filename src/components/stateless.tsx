@@ -12,7 +12,7 @@ export const Stateless: SFC<Props> = ({
 	text
 }) => (
 	<div onClick={handleClick}>
-		{color![0]}
-		{text}
+		<p>{color![0]}</p>
+		<p>{text}</p>
 	</div>
 )

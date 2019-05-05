@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { ComponentType } from 'react'
 
 export const withDefaultProps = <
@@ -7,7 +8,6 @@ export const withDefaultProps = <
 	defaultProps: DP,
 	Cmp: ComponentType<P>
 ) => {
-	// 提取必要属性
 	type RequiredProps = Omit<P, keyof DP>
 	type Props = Partial<DP> & Required<RequiredProps>
 

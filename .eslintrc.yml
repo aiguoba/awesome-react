@@ -23,7 +23,7 @@ plugins:
 rules:
   'no-console': 'off'
   indent:
-    - error
+    - warn
     - tab
   linebreak-style: 'off'
   quotes:
