@@ -5,6 +5,7 @@
 - babel@7
 - webpack@4
 - typescript@3
+- [typo.css](https://typo.sofi.sh/)
 
 ## 参考文档
 

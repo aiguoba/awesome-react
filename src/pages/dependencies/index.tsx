@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import pkg from '../../package.json'
+import pkg from '../../../package.json'
 
 type dependencies = {
 	[propName: string]: any

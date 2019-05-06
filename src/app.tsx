@@ -9,6 +9,7 @@ import { renderRoutes } from 'react-router-config'
 import ErrorBoundary from './utils/error-boundary'
 import { RouteConfig } from 'react-router-config'
 import routes from './routes'
+import './index.css'
 
 interface Props {}
 interface State {}
