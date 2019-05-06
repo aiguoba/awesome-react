@@ -18,13 +18,13 @@ export default class Home extends Component {
 				</p>
 
 				<ol>
-					{routes.map((route: route) =>
-						route.navigate !== false ? (
+					{routes
+						.filter((route: route) => route.navigate !== false)
+						.map(route => (
 							<li key={route.path}>
 								<a>{route.name}</a>
 							</li>
-						) : null
-					)}
+						))}
 				</ol>
 
 				<style jsx>
