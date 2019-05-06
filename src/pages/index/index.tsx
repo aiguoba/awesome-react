@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import routes from 'routes'
 
+type route = {
+	[propName: string]: any
+}
+
 export default class Home extends Component {
 	render() {
 		return (
@@ -14,7 +18,7 @@ export default class Home extends Component {
 				</p>
 
 				<ol>
-					{routes.map(route =>
+					{routes.map((route: route) =>
 						route.navigate !== false ? (
 							<li key={route.path}>
 								<a>{route.name}</a>
