@@ -6,6 +6,10 @@
 - webpack@4
 - typescript@3
 
+## 参考文档
+
+- [](https://levelup.gitconnected.com/ultimate-react-component-patterns-with-typescript-2-8-82990c516935)
+
 ## React 组件模式
 
 ### 无状态组件
