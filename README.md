@@ -9,7 +9,7 @@
 
 ## 参考文档
 
-- [](https://levelup.gitconnected.com/ultimate-react-component-patterns-with-typescript-2-8-82990c516935)
+- [react-component-patterns-with-typescript](https://levelup.gitconnected.com/ultimate-react-component-patterns-with-typescript-2-8-82990c516935)
 
 ## React 组件模式
 

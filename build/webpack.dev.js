@@ -9,7 +9,7 @@ const { HOST, PORT } = process.env
 
 module.exports = merge(webpackBaseConfig, {
 	mode: 'development',
-	devtool: 'eval',
+	devtool: 'eval-source-map',
 	devServer: {
 		host: HOST,
 		port: PORT,
@@ -24,7 +24,6 @@ module.exports = merge(webpackBaseConfig, {
 		historyApiFallback: true,
 		clientLogLevel: 'warning'
 	},
-
 	plugins: [
 		new FriendlyErrorsWebpackPlugin({
 			compilationSuccessInfo: {

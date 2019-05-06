@@ -2,6 +2,7 @@ import React, { Component, ErrorInfo } from 'react'
 
 type State = {
 	hasError: boolean
+	error: Error | null
 }
 
 type Props = {}
@@ -11,7 +12,7 @@ type Info = {}
 export default class ErrorBoundary extends Component<Props, State> {
 	constructor(props: object) {
 		super(props)
-		this.state = { hasError: false }
+		this.state = { hasError: false, error: null }
 	}
 
 	static getDerivedStateFromError(error: Error) {
@@ -20,13 +21,17 @@ export default class ErrorBoundary extends Component<Props, State> {
 	}
 
 	componentDidCatch(error: Error, info: ErrorInfo) {
+		this.setState({
+			error
+		})
 		// You can also log the error to an error reporting service
 	}
 
 	render() {
-		if (this.state.hasError) {
+		const { error, hasError } = this.state
+		if (hasError) {
 			// You can render any custom fallback UI
-			return <h1>Something went wrong.</h1>
+			return <h1>{String(error)}</h1>
 		}
 
 		return this.props.children
