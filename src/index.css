@@ -243,6 +243,7 @@ pre,
 code,
 pre tt {
 	font-family: Courier, 'Courier New', monospace;
+	overflow-x: scroll;
 }
 
 pre {

@@ -11,14 +11,14 @@ export default class Dependencies extends Component {
 	render() {
 		return (
 			<>
-				<h2>Use</h2>
-				<ul>
+				<h1>项目依赖</h1>
+				<ol>
 					{Object.keys(dependencies).map(dependency => (
-						<ol key={dependency}>
+						<li key={dependency}>
 							{dependency}: {dependencies[dependency]}
-						</ol>
+						</li>
 					))}
-				</ul>
+				</ol>
 			</>
 		)
 	}

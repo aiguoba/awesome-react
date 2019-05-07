@@ -7,11 +7,9 @@ interface Props extends RouteConfig {}
 export default class TypeScriptComponent extends Component<Props> {
 	render() {
 		const route: RouteConfig = this.props.route
-		console.log(route.routes)
 
 		return (
 			<>
-				<h2>Component</h2>
 				<Switch>{renderRoutes(route.routes)}</Switch>
 			</>
 		)

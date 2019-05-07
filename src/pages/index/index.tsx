@@ -16,53 +16,48 @@ function Home(props: Props) {
 
 	return (
 		<>
-			<div className="wrapper typo">
-				<h1>
-					React with <i className="serif">TypeScript</i>
-				</h1>
-				<p id="theorem">
-					Any application that can be written in JavaScript, will eventually be
-					written in TypeScript.
-				</p>
+			<h1>
+				React with <i className="serif">TypeScript</i>
+			</h1>
+			<p id="theorem">
+				Any application that can be written in JavaScript, will eventually be
+				written in TypeScript.
+			</p>
 
-				<ol>
-					{routes
-						.filter((route: route) => route.navigate !== false)
-						.map((route: route) => (
-							<li
-								key={route.path}
-								onClick={
-									(route.routes || []).length
-										? () => {}
-										: linkTo.bind(null, route.path)
-								}
-							>
-								<a>{route.name}</a>
-								{/* Child Route */}
-								{(route.routes || []).length ? (
-									<ul>
-										{route.routes.map((childRoute: route) => {
-											console.log(childRoute)
-											return (
-												<li
-													key={childRoute.path}
-													onClick={linkTo.bind(null, childRoute.path)}
-												>
-													<a>{childRoute.name}</a>
-												</li>
-											)
-										})}
-									</ul>
-								) : null}
-							</li>
-						))}
-				</ol>
-			</div>
+			<ol>
+				{routes
+					.filter((route: route) => route.navigate !== false)
+					.map((route: route) => (
+						<li
+							key={route.path}
+							onClick={
+								(route.routes || []).length
+									? () => {}
+									: linkTo.bind(null, route.path)
+							}
+						>
+							<a>{route.name}</a>
+							{/* Child Route */}
+							{(route.routes || []).length ? (
+								<ul>
+									{route.routes.map((childRoute: route) => {
+										console.log(childRoute)
+										return (
+											<li
+												key={childRoute.path}
+												onClick={linkTo.bind(null, childRoute.path)}
+											>
+												<a>{childRoute.name}</a>
+											</li>
+										)
+									})}
+								</ul>
+							) : null}
+						</li>
+					))}
+			</ol>
 			<style jsx>
 				{`
-					.wrapper {
-						padding: 2% 10%;
-					}
 					.serif {
 						color: #1abc9c;
 					}
