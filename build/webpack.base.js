@@ -22,7 +22,7 @@ module.exports = {
 		mainFiles: ['index']
 	},
 	output: {
-		path: join(__dirname, '../dist'),
+		path: join(__dirname, '../docs'),
 		filename: '[name].[hash].js'
 	},
 	module: {
