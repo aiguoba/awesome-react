@@ -48,6 +48,10 @@ module.exports = {
 				test: /\.svg$/,
 				use: 'file-loader'
 			},
+			{
+				test: /\.md$/,
+				use: 'raw-loader'
+			},
 			{ test: /\.(eot|woff|ttf)$/, loader: 'file-loader' },
 			{
 				test: /\.(jpe?g|png|gif)$/,

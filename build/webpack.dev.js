@@ -9,7 +9,7 @@ const { HOST, PORT } = process.env
 
 module.exports = merge(webpackBaseConfig, {
 	mode: 'development',
-	devtool: 'eval',
+	devtool: 'cheap-module-eval-source-map',
 	output: {
 		publicPath: '/'
 	},

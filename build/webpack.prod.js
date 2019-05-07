@@ -7,6 +7,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = merge(webpackBaseConfig, {
 	mode: 'production',
+	devtool: 'cheap-module-source-map',
 	optimization: {
 		minimizer: [
 			new UglifyJsPlugin({
