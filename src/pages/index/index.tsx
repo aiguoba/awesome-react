@@ -29,9 +29,31 @@ function Home(props: Props) {
 					{routes
 						.filter((route: route) => route.navigate !== false)
 						.map((route: route) => (
-							<li key={route.path} onClick={linkTo.bind(null, route.path)}>
+							<li
+								key={route.path}
+								onClick={
+									(route.routes || []).length
+										? () => {}
+										: linkTo.bind(null, route.path)
+								}
+							>
 								<a>{route.name}</a>
-								{(route.routes || []).length ? <ul>1</ul> : null}
+								{/* Child Route */}
+								{(route.routes || []).length ? (
+									<ul>
+										{route.routes.map((childRoute: route) => {
+											console.log(childRoute)
+											return (
+												<li
+													key={childRoute.path}
+													onClick={linkTo.bind(null, childRoute.path)}
+												>
+													<a>{childRoute.name}</a>
+												</li>
+											)
+										})}
+									</ul>
+								) : null}
 							</li>
 						))}
 				</ol>
